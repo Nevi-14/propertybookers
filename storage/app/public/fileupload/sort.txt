@@ -1,0 +1,82 @@
+    function sort(Request $request, $query_data)
+    {
+        $now = Carbon::now();
+        if($request->date_sort == 'today')
+        {
+            $today = Carbon::today()->toDateString();
+            $query_data = $query_data->whereDate('created_at','=',$today);
+        }
+        elseif($request->date_sort == 'yesterday'){
+            $yesterday = Carbon::yesterday()->toDateString();
+            $query_data = $query_data->whereDate('created_at','=',$yesterday);                
+        }
+        elseif($request->date_sort == 'this_week'){
+            $weekStartDate = $now->startOfWeek()->format('Y-m-d H:i');
+            $weekEndDate = $now->endOfWeek()->format('Y-m-d H:i');
+            $query_data = $query_data->whereDate('created_at','>=',$weekStartDate);     
+            $query_data = $query_data->whereDate('created_at','<=',$weekEndDate);     
+        }  
+        elseif($request->date_sort == 'last_week'){
+            $subWeek = $now->subWeek();
+            $lastWeekStartDate = $subWeek->startOfWeek()->format('Y-m-d H:i');
+            $lastWeekEndDate = $subWeek->endOfWeek()->format('Y-m-d H:i');
+            $query_data = $query_data->whereDate('created_at','>=',$lastWeekStartDate);     
+            $query_data = $query_data->whereDate('created_at','<=',$lastWeekEndDate); 
+        } 
+        elseif($request->date_sort == 'this_month'){
+            $startOfMonth = $now->startOfMonth()->toDateString();
+            $endOfMonth = $now->endOfMonth()->toDateString();
+            $query_data = $query_data->whereDate('created_at','>=',$startOfMonth);     
+            $query_data = $query_data->whereDate('created_at','<=',$endOfMonth); 
+        } 
+        elseif($request->date_sort == 'last_month'){
+            $subMonth = $now->subMonth();
+            $startOfMonth = $subMonth->startOfMonth()->toDateString();
+            $endOfMonth = $subMonth->endOfMonth()->toDateString();
+            $query_data = $query_data->whereDate('created_at','>=',$startOfMonth);     
+            $query_data = $query_data->whereDate('created_at','<=',$endOfMonth); 
+        } 
+        elseif($request->date_sort == 'last_3_months'){
+            // For Last 3 months
+            $lastOneMonth = $now->subMonth(1);
+            $lastOneMonthEnd = $lastOneMonth->endOfMonth()->toDateString();
+            $thirdLastMonth =  $now->subMonth(2);
+            $thirdLastMonthStart = $thirdLastMonth->startOfMonth()->toDateString();
+
+            $query_data = $query_data->whereDate('created_at','>=',$thirdLastMonthStart); 
+            $query_data = $query_data->whereDate('created_at','<=',$lastOneMonthEnd); 
+        } 
+        elseif($request->date_sort == 'last_6_months'){
+            // For Last 6(3+3) months
+            $lastOneMonth = $now->subMonth(1);
+            $lastOneMonthEnd = $lastOneMonth->endOfMonth()->toDateString();
+
+            $Last6thMonth =  $now->subMonth(6);
+            $Last6thMonthStart = $Last6thMonth->startOfMonth()->toDateString();
+
+            $query_data = $query_data->whereDate('created_at','>=',$Last6thMonthStart);     
+            $query_data = $query_data->whereDate('created_at','<=',$lastOneMonthEnd); 
+        } 
+        elseif($request->date_sort == 'this_year'){
+            // This Year 1 Jan to 31 Dec
+            $thisYearStart = $now->startOfYear(1)->toDateString();
+            $thisYearEnd = $now->endOfYear(1)->toDateString();
+            $query_data = $query_data->whereDate('created_at','>=',$thisYearStart);     
+            $query_data = $query_data->whereDate('created_at','<=',$thisYearEnd); 
+        } 
+        elseif($request->date_sort == 'last_year'){
+            // This Year 1 Jan to 31 Dec
+            $lastYear = $now->subYear(1);
+            $lastYearStart = $lastYear->startOfYear(1)->toDateString();
+            $lastYearEnd = $lastYear->endOfYear(1)->toDateString();
+            $query_data = $query_data->whereDate('created_at','>=',$lastYearStart);     
+            $query_data = $query_data->whereDate('created_at','<=',$lastYearEnd); 
+        } 
+        elseif($request->date_sort == 'custom'){
+            $dates = explode(' - ', $request->custom_range);
+            $query_data = $query_data->whereDate('created_at','>=',$dates[0]);     
+            $query_data = $query_data->whereDate('created_at','<=',$dates[1]); 
+        } 
+        return $query_data;    
+    }
+    

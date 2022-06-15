@@ -1,0 +1,42 @@
+
+GO
+
+CREATE PROCEDURE pa_Divisores (@Numero INT)
+AS BEGIN
+DECLARE @Res int
+DECLARE @Cont int
+DECLARE @Divisores int
+SET @Cont = 1
+WHILE (@Cont < @Numero) BEGIN --Pendiente revisar esa pregunta
+SET @Res = @Numero % @Cont
+IF ( @Res = 0) BEGIN --Pendiente esta pregunta
+SET @Divisores = @Cont + 1
+END
+-- aumentar el contador
+SET @Cont = @Cont + 1
+END
+
+
+-- imprimir la cantidad de divisores que tenia el numero
+
+PRINT CAST(@Divisores AS VARCHAR)
+END
+ GO
+ GO
+/* Hacer Procedimiento almacenado que reciba un numero
+   y me muestre cuantoss divisores tiene ese numero*/
+CREATE PROCEDURE dd (@Numero INT)
+AS BEGIN
+DECLARE @Res int
+DECLARE @Cont int
+DECLARE @Divisores int
+SET @Cont = 1
+SET @Res = @Numero % @Cont
+PRINT CAST(@Res AS VARCHAR)
+
+END
+
+
+GO
+
+ EXEC  pa_Divisores @Numero = 10

@@ -1,0 +1,1119 @@
+
+
+html{    
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body { 
+  position: relative;
+   min-height: 100%;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+#content-wrap {
+  position: relative;
+}
+#nav-logo{
+height: 140px;
+
+}
+#footer {
+position: absolute;
+ bottom: 0;
+background-color: #4f5b66;
+width: 100%;
+  height: 2.5rem;            /* Footer height */
+  display: grid;
+  place-content: center;
+  font-size: 1rem;
+  color: white;
+  overflow: hidden;}
+
+/** header **/ 
+.header-btn{
+  width: 130px;
+  border: none;
+  border-radius: 100px;
+  background: #008E9B;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+.header-btn:hover{
+background: purple;
+}.header-btn-2{
+  width: 130px;
+  border: none;
+  border-radius: 100px;
+  background: purple;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;}
+.header-btn:hover,.header-btn-2:hover{
+background:#FF9671;
+}
+
+/** navbar and components **/
+.navbar-new-top{
+  position: relative ;
+  top: 0;
+  height: 100px;
+}
+.center-main{
+  position: absolute;
+  text-align: center;
+  color: purple;
+font-size: 24px;
+ width: 100vw;
+letter-spacing: 4px;
+z-index: -1;
+}
+.navbar-brand{
+
+color: purple;
+
+font-size: 24px;
+
+letter-spacing: 4px;
+
+font-weight: bold;
+
+text-transform: uppercase;
+
+margin-left: 350px;
+
+width: 100%;
+
+font-weight: bold;
+
+
+
+}
+
+.navbar-brand img{
+
+  width: 20%;
+
+}
+
+.navbar-new-bottom{
+position: relative;
+}
+
+
+
+.navbar-nav .nav-item a {
+
+  color: purple;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  transition: 1s ease;
+
+}
+
+.navbar-nav .nav-item a.active{
+
+  font-weight: bold;
+
+}
+
+ a.active { 
+
+  border-bottom: 2px solid purple;
+
+}
+
+.navbar-nav .nav-item a:hover{
+
+  color: #0062cc;
+
+}
+
+
+
+/** custom css**/
+
+
+
+.row-separator{
+
+margin-top: 100px;
+
+margin-bottom: 100px;
+
+}
+
+
+
+.center{
+
+  display: grid;
+
+  place-content: center;
+
+}
+
+/** fixed social media icons **/
+
+.pic-icon{
+
+
+
+  height: 30px;
+
+}
+
+.facebook {
+
+  color: blue;
+
+}
+
+.instagram {
+
+  color: purple;
+
+}
+
+.chat {
+
+  color: #FFF;
+
+}
+
+.youtube {
+
+  color: red;
+
+}
+
+.card-header{
+
+  border-bottom: none;
+
+  display: grid;
+
+  place-items: center;
+
+}
+
+ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+.fixed-plugin li {
+
+  background: rgba(128, 128, 128, 0.5);
+
+  width: 50px;
+
+  height: 50px;
+
+  display: grid;
+
+  place-content: center;
+
+  border-radius: 50%;
+
+  margin-top: 8px;
+
+  margin-bottom: 8px;
+
+  text-decoration: none;
+
+}
+
+.fixed-plugin li a {
+
+  font-size: 22px;
+
+}
+
+
+
+.user-icon{
+
+  color: #008E9B;
+
+  font-weight: bold;
+
+}
+
+
+
+.title{
+
+  display: inline-block;
+
+  font-size:2rem;
+
+color: #008E9B;
+
+  margin-top: 20px;
+
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+
+
+
+
+}
+
+
+
+.card-body-card{
+
+  padding: 20px 40px;
+
+  font-size: 24px;
+
+}
+
+.card-info{
+
+  padding-top: 20px;
+
+  height: 400px!important;
+
+  width: 18rem;
+
+}
+
+.card-info .card-title{
+
+  color: #008E9B;
+
+  font-weight: bold;
+
+  text-transform: capitalize;
+
+}
+
+.card img {
+
+  height: 180px;
+
+  width: 180px;
+
+  margin: 0 auto;
+
+  transition: transform 0.3s;
+
+}
+
+.card img:hover {
+
+  transform: scale(1.1);
+
+}
+
+
+
+/* Video Parallax Section*/
+
+.ParallaxVideo {
+
+  position: relative;
+
+  height: 600px !important;
+
+  margin-top: 10%;
+
+}
+
+.ParallaxVideo video {
+
+  position: relative;
+
+  width: 100%;
+
+  max-height: 500px;
+
+  min-width: 100%;
+
+  object-fit: fill;
+
+}
+
+
+
+.text{
+
+  font-size: 1.2rem;
+
+}
+
+
+
+.img{
+
+height: 80%;
+
+width: 80%;
+
+}
+
+
+
+.fixed-plugin {
+
+  position: fixed;
+
+  bottom: 25px;
+
+  right: 0;
+
+  width: 60px;
+
+  background: transparent;
+
+  z-index: 3;
+
+  border-radius: 8px 0 0 8px;
+
+  text-align: center;
+
+}
+
+.header {
+
+  position: relative;
+
+  margin-top: 4%;
+
+  margin-bottom: 4%;
+
+}
+
+.header .header-title {
+
+  color: purple;
+
+  font-size: 32px;
+
+  letter-spacing: 2px;
+
+  text-align: left;
+
+}
+
+.header .header-body .title-text {
+
+  color: black;
+
+  font-size: 26px;
+
+  text-transform: uppercase;
+
+}
+
+.header .header-body {
+
+  padding: 2%;
+
+}
+
+
+
+
+
+.header .header-body .title-icon {
+
+  font-size: 20px;
+
+  color: #ffc245;
+
+  padding: 0;
+
+  margin-right: 2%;
+
+}
+
+
+
+
+
+
+
+.zoom {
+
+  transition: transform 0.2s; /* Animation */
+
+}
+
+
+
+.zoom:hover {
+
+  transform: scale(
+
+    1.1
+
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+
+.parallax-contaier{
+
+
+
+  margin-top: 60px!important;
+
+}
+
+
+
+.parallax-window {
+
+  position: relative;
+
+  background: transparent;
+
+  height: 250px;
+
+  
+
+}
+
+  #main-header-title {
+
+    z-index: 2;
+
+    position: absolute;
+
+    top: 46%;
+
+    color: #fff;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    width: 100%;
+
+    font-weight: bold;
+
+  }
+
+  
+
+  #secondary-header-title {
+
+    z-index: 2 !important;
+
+    position: absolute;
+
+    bottom: 8%;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 0.7rem;
+
+    width: 100%;
+
+  text-align: center
+
+  }
+
+  #info-banner {
+
+    z-index: 2;
+
+    position: absolute;
+
+    top: 0;
+
+    right: 4%;
+
+    color: #fff;
+
+    font-weight: 400;
+
+    font-size: 1rem;
+
+    padding: 14px;
+
+    background: rgba(128, 128, 128, 0.8);
+
+    height: 40px;
+
+ 
+
+  }
+
+
+
+ 
+
+
+
+
+
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+
+
+
+
+
+
+
+  
+
+.left {
+
+  margin-left: 4rem;
+
+}
+
+
+
+
+
+ 
+
+  #info-banner {
+
+    z-index: 2;
+
+    position: absolute;
+
+    top: 0;
+
+    right: 8%;
+
+    color: #fff;
+
+    font-weight: 400;
+
+    font-size: 1.4rem;
+
+    padding: 10px;
+
+    background: rgba(128, 128, 128, 0.5);
+
+  }
+
+  .parallax-contaier {
+
+    position: relative;
+
+    max-width: 100%;
+
+  }
+
+  .parallax-window {
+
+    background: transparent;
+
+    height: 490px;
+
+  }
+
+  
+
+  #main-header-title {
+
+    z-index: 2;
+
+    position: absolute;
+
+    top: 30%;
+
+    color: #fff;
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+  }
+
+  #secondary-header-title {
+
+    z-index: 2 !important;
+
+    position: relative;
+
+    color: #fff;
+
+    font-weight: 400;
+
+    font-size: 2rem;
+
+  }
+
+
+
+  
+
+}
+
+
+
+.webform{
+
+color: black;
+
+background:#e6e6e6;
+
+border-radius:8px;
+
+box-shadow:0 0 40px -10px #000;
+
+
+
+
+
+
+
+}
+
+#modal-header{
+
+  border-bottom:none;
+
+}
+
+
+
+#modal-header .modal-title{
+
+  font-size: 1.2rem;
+
+  letter-spacing: 2px;
+
+  margin-bottom:10px;
+
+display: inline-block;
+
+  color:#78788c;
+
+  border-bottom:3px solid #78788c
+
+
+
+}
+
+.footer-modal{
+
+  content:'Hi';
+
+  position:absolute;
+
+  bottom:-30px;
+
+  left: 20%;
+
+  background:#78788c;
+
+  color:#fff;width:320px;
+
+  padding:16px 4px 16px 0;
+
+  border-radius:6px;
+
+  font-size:13px;
+
+  box-shadow:10px 10px 40px -14px #000
+
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+
+
+  #content-wrap {
+
+    position: relative;
+
+    margin-top: 180px!important;
+
+
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+  .navbar-new-top{
+
+  position: absolute ;
+
+  top: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  height: 180px;  
+
+  padding: 0;
+
+  margin: 0;
+
+
+
+  
+
+  }
+
+  .navbar-brand{
+
+ position: absolute;
+
+ top: 100px;
+
+    color: purple;
+
+    font-size: 1.6rem;
+
+  letter-spacing: 2px;
+
+  font-weight: bold;
+
+
+
+  text-align: center;
+
+  margin-left: 0;
+
+  width: 100%;
+
+  margin-right: 0;
+
+
+
+ 
+
+    
+
+  }
+
+
+
+
+  .navbar-new-top ul{
+
+    margin-right: 0;
+
+  }
+
+  .navbar-new-top ul li{
+
+    margin-right:0;
+
+  }
+
+  
+
+  .navbar-new-bottom{
+
+  position: relative;
+
+    top: 180px;
+
+    height: 60px;
+
+    padding: 0;
+
+  }
+
+  
+
+  .navbar-nav .nav-item a {
+
+    color: purple;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition: 1s ease;
+
+  }
+
+
+
+  .header-btn,.header-btn-2{
+
+  width: 120px;
+
+ font-size: 14px;
+
+  }
+
+
+
+  #footer {
+
+    font-size: 0.8rem;
+
+    
+
+  }
+
+
+
+  
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+
+
+
+  #main-header-title {
+
+    z-index: 2;
+
+    position: absolute;
+
+    top: 40%;
+
+    color: #fff;
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    width: 100%;
+
+    font-weight: bold;
+
+  }
+
+  
+
+  #secondary-header-title {
+
+    z-index: 2 !important;
+
+    position: absolute;
+
+    bottom: 8%;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 2rem;
+
+    width: 100%;
+
+  text-align: center
+
+  }
+
+
+
+
+
+}
+
+
+
+.partner-images{
+
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+
+}
+
+
+
+.partner{
+
+  height: 100px;
+
+  width: 280px;
+
+}
+
+.partner-2{
+
+  height: 140px;
+
+  width: 240px;
+
+  background-color: transparent;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+
+.card-login{
+
+  width:18rem;
+
+  height: 400px;
+
+}
+
+.card-login .card-body{
+
+  
+
+  padding: 1rem;
+
+}
+
+
+
+/* Video Parallax Section*/
+
+.ParallaxVideo {
+
+  position: relative;
+
+  height: 200px !important;
+
+  margin-top: 10%;
+
+}
+
+.ParallaxVideo video {
+
+  position: relative;
+
+  width: 100%;
+
+  max-height: 250px;
+
+  min-width: 100%;
+
+  object-fit: fill;
+
+}
+
+.title{
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  width: 100%;
+
+text-align: left;
+
+}
+
+.partner-images{
+
+  flex-direction: column;
+
+}
+
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .card-login{
+
+    width:20rem;
+
+    height: 24rem;
+
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+#footer{
+
+  position: absolute;
+
+}
+
+  .card-login{
+
+    width:22rem;
+
+    height: 26rem;
+
+ margin-top: 120px;
+
+ padding: 10px;
+
+  }
+
+}

@@ -1,0 +1,10 @@
+Recopila todos los correos expuestos en internet https://hunter.io/
+
+
+comando de google intitle:"index of" inurl:ftp
+
+comandos de busqueda de google
+
+https://intelx.io/  ->   recopila informacion de ciber ataques expuesta 
+
+sudo msfconsole

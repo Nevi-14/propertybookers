@@ -1,0 +1,17 @@
+create table usuarios(
+id  int auto_increment primary key,
+   usuario varchar(60),
+  password varchar(60),
+  correo varchar (60),
+  nombre varchar(60),
+  carnet varchar(60)
+  
+  
+)
+
+BOOTSTRAP
+
+https://getbootstrap.com/
+
+IMAGENES
+https://unsplash.com/

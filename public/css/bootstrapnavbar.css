@@ -1,0 +1,144 @@
+
+/*NAVBAR CONTAINER*/
+.navbar-container{
+    background: chartreuse;
+    height: 200px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+
+  /** navbar and components **/
+.navbar-new-top{
+width: 100%;
+  }
+
+  #nav-logo{
+    height: 140px;
+    margin-left: 100px;
+    
+    
+    }
+
+    
+/*NAVBAR CONTAINER*/
+.navbar-container{
+    background: brown;
+    height: 240px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+
+  /** navbar and components **/
+.navbar-new-top{
+width: 100%;
+  }
+
+  #nav-logo{
+background: red;
+    
+    
+    }
+
+    .navbar-new-bottom{
+        position: relative;
+        }
+
+        .navbar-new-bottom{
+
+            position: relative;
+          
+              top:160px;
+          
+              height: 60px;
+          
+              padding: 0;
+          
+            }
+          
+
+    /* SMALL DEVICES LESS THAN 600PX */
+
+@media screen and (max-width:600px){
+
+    .logo-container{
+      width: 100%;
+    display: flex;
+    background: blue;
+    }
+    #nav-logo{
+      height: 120px;
+      margin: 0 auto;
+    }
+  
+  
+  
+    .card-login{
+      width:18rem;
+    
+      margin-top: 20px;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+        }
+        
+        
+    
+    .card-login .card-body{
+    
+      padding: 1rem;
+    
+    }
+    
+    
+    
+    /* Video Parallax Section*/
+    
+    .ParallaxVideo {
+    
+      position: relative;
+    
+      height: 200px !important;
+    
+      margin-top: 10%;
+    
+    }
+    
+    .ParallaxVideo video {
+    
+      position: relative;
+    
+      width: 100%;
+    
+      max-height: 250px;
+    
+      min-width: 100%;
+    
+      object-fit: fill;
+    
+    }
+    
+    .title{
+    
+      font-size: 18px;
+    
+      font-weight: bold;
+    
+      width: 100%;
+    
+    text-align: left;
+    
+    }
+    
+    .partner-images{
+    
+      flex-direction: column;
+    
+    }
+    
+    
+    
+  
+  }

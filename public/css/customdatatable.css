@@ -1,0 +1,210 @@
+.custom-card-title{
+    font-size: 20px!important;
+   font-weight: bold!important;
+   text-transform: uppercase;
+   color: #1b4b72;
+   width: 100%!important;
+   text-align: center;
+  }
+  .card-notification{
+    width: 100%;
+    display: flex;
+   justify-content: center;
+  }
+  .card-notification .badge{
+    height: 40px;
+    width: 40px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px!important;
+    border-radius: 50%!important;
+  }
+  
+  .zoom{
+    transition: transform .2s;
+  }
+  .zoom:hover{
+    transform: scale(1.05);
+  }
+  .stage {
+    border-left: .5rem solid darkcyan!important;
+  }
+  blockquote {
+    border-left: .5rem solid darkcyan!important;
+  }
+  
+  .fixed-plugin {
+    position: fixed;
+    top: 140px;
+    right:80px;
+    width: 30px;
+    background: transparent;
+    z-index: 3;
+    border-radius: 8px 0 0 8px;
+    text-align: center;
+
+  }
+  .fixed-plugin li {
+      background: rgba(0, 139, 139, 0.5);
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      text-decoration: none;
+  
+    }
+    .fixed-plugin li a i {
+      font-size: 20px!important;
+  color: #123c24;
+    }
+  
+    .disabled{
+      pointer-events: none;
+    }
+    .card-table tbody{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+    }
+  
+   .card-table tbody tr {
+      float: left;
+      width: 11.5rem;
+      border: 0.0625rem solid rgba(0, 0, 0, .125);
+      border-radius: .25rem;
+      margin: 4px;
+      box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+
+     
+   }
+   
+   .card-table tbody td {
+      display: block;
+      
+   }
+   
+   .card-table thead {
+      display: none;
+   }
+   
+   .card-table td:before {
+      content: attr(data-label);
+      position: relative;
+      float: left;
+      color: #808080;
+      min-width: 2rem;
+      margin-left: 0;
+      text-align: left;   
+    
+   }
+   
+   .card-table tr.selected td:before {
+      color: #CCC;
+   }
+   .card-table  table {
+    table-layout: fixed;
+    min-width: 100%;
+    width: 100%!important;
+  }
+  .card-table .number{
+    font-size: 14px;
+  } 
+  .dt-button{
+    background:#45515d!important; /* Green */
+    border: none!important;
+    color: white!important;
+    padding: 4px 12px!important;
+    text-align: center!important;
+    text-decoration: none!important;
+    display: inline-block!important;
+    font-size: 16px!important;
+    width: auto;
+    height: 30px!important;
+  }
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1400px) {
+    .card-table tbody tr {
+        float: left;
+        width: 15rem;
+        margin: 0.5rem;
+        border: 0.0625rem solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+     }
+
+    .number{
+        font-size: 16px;
+      } 
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    
+  }
+.relative-position{
+  width: 100%;
+}
+  .fixed-position {
+    position: fixed;
+    width: 100%;
+}

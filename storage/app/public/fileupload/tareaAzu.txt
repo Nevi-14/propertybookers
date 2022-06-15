@@ -1,0 +1,34 @@
+
+/*Crear vista*/
+
+
+CREATE VIEW orden_detalle
+AS
+
+  select Ordenes_Detalle.Producto_ID, orden_id,orden_detalle_id,Cantidad,Nom_Producto , productos.Precio ,
+ Ordenes_Detalle.Cantidad *  productos.Precio as subtotal 
+  from ordenes_detalle inner join  productos on productos.Producto_ID = ordenes_detalle.Producto_ID
+
+Go
+
+/*Usando la vista creada*/
+
+  SELECT orden_id, cantidad, sum(subtotal) over() as total  FROM orden_detalle
+
+
+Go
+
+
+CREATE VIEW orden_final
+AS
+
+select ordenes.orden_id, ordenes.fec_orden,clientes.nom_cliente, empleados.Nombre as empleado, transportistas.nom_transportista
+ , sum(ordenes_detalle.cantidad) over() as total_productos, sum(productos.precio+ordenes_detalle.cantidad) over() as total
+ from clientes inner join ordenes on clientes.cliente_Id =  ordenes.cliente_Id
+ inner join empleados on empleados.empleado_id =  ordenes.empleado_id
+ inner join transportistas on transportistas.transportista_id =  ordenes.transportista_id
+inner join ordenes_detalle on ordenes.orden_id = ordenes_detalle.orden_id  
+ inner join productos on productos.producto_id = ordenes_detalle.producto_id 
+
+Go
+

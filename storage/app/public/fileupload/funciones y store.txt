@@ -1,0 +1,78 @@
+
+
+/*
+CREATE FUNCTION TopTenCustomers (@parameter_name data_type)
+  RETURNS TABLE
+  AS
+       RETURN (
+		   SELECT TOP 10 [FirstName]
+		  ,[LastName]
+		  ,[Education]
+		  ,[Occupation]
+		  ,[YearlyIncome]
+		  ,[Sales]
+		  ,[HireDate]
+		  FROM [MyEmployees Table]
+               )
+*/
+
+USE W3SHOOLS;
+GO
+CREATE FUNCTION test(@codigoP  varchar(10),@ciudad varchar(20)  )
+  RETURNS TABLE
+  AS
+  RETURN (
+		 SELECT * 
+		  FROM clientes where Ciudad = @ciudad  AND  Codigo_Postal = @codigoP
+      )
+GO
+
+select * from  test( '12209', 'San carlos');
+GO
+sp_help  Clientes;
+
+GO
+
+DROP FUNCTION test;
+
+GO
+
+SELECT * FROM CLIENTES;
+
+GO
+
+/**
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+*/
+UPDATE CLIENTES SET Ciudad = 'San carlos', Codigo_Postal = '12209' WHERE 
+
+Cliente_ID <= 5 
+
+/**
+
+STORE PROCEDURE
+
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+*/
+
+GO
+
+CREATE PROCEDURE listaClientes(@pais varchar(20), @id INTEGER)
+
+AS 
+
+SELECT * FROM CLIENTES INNER  WHERE Pais = @pais AND Cliente_ID = @id;
+
+GO
+
+ EXEC  listaClientes @pais = 'Germany', @id = 1;
+
+GO
+
+DROP PROCEDURE listaClientes;
